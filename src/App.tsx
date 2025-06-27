@@ -7,8 +7,12 @@ import Footer from './components/footer/MultiColumnFooter'
 import Navbar from './components/navbar/BlogNavbar'
 import Newsletter from './components/newsletter/Newsletter'
 import SectionHeading from './components/sectionHeading/ColoredSectionHeading'
+import { getAllPosts } from './utils/loadPosts'
+import { Buffer } from 'buffer'
+window.Buffer = Buffer
 
 function App() {
+  const posts = getAllPosts()
   return (
     <>
       <Navbar />
@@ -21,7 +25,7 @@ function App() {
           title={['Latest', 'Articles']}
           subtitle="Diverse Range of articles related to html css and javascript"
         />
-        <BlogList posts={blogPosts} />
+        <BlogList posts={posts} />
 
   
 

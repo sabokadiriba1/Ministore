@@ -2,13 +2,14 @@ import { FC } from 'react'
 import VerticalBlogCard from './VerticalBlogCard'
 import HorizontalBlogCard from './HorizontalBlogCard'
 
-interface BlogPost {
+export interface BlogPost {
   title: string
   shortDescription: string
   cover: string
   slug: string
   publishDate: string
   estimatedTimeToRead: string
+ 
 }
 
 interface BlogListProps {
