@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: main # or your actual Git branch
 
-media_folder: "public/uploads"
-public_folder: "/uploads"
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
@@ -11,11 +11,13 @@ collections:
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Short Description", name: "shortDescription", widget: "text" }
-      - { label: "Cover Image", name: "cover", widget: "image" }
-      - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
-      - { label: "Read Time", name: "estimatedTimeToRead", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "shortDescription", label: "Short Description", widget: "text" }
+      - { name: "cover", label: "Cover Image", widget: "image" }
+      - { name: "slug", label: "Slug", widget: "string" }
+      - { name: "publishDate", label: "Publish Date", widget: "datetime" }
+      - { name: "estimatedTimeToRead", label: "Reading Time", widget: "string" }
+      - { name: "body", label: "Body", widget: "markdown" }
