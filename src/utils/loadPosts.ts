@@ -9,7 +9,7 @@ export const getAllPosts = (): BlogPost[] => {
 
     // Optional: derive slug from filename if needed
     const filename = filePath.split('/').pop() ?? ''
-    const slug = filename.replace('.md', '')
+    const slug = filename.replace(/\.(md|mdx)$/, '');
 
     return {
       title: data.title,
