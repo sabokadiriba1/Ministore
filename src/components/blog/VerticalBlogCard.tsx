@@ -3,10 +3,10 @@ import { formatDate } from '../../utils'
 
 interface BlogPost {
   title: string
-  shortDescription: string
-  cover: string
+  description: string
+  url: string
   slug: string
-  publishDate: string
+  publishedAt: string
   estimatedTimeToRead: string
 }
 
@@ -15,7 +15,7 @@ interface BlogCardProps {
 }
 
 const BlogCard: FC<BlogCardProps> = ({ post }) => {
-  const { title, shortDescription, cover, slug, publishDate, estimatedTimeToRead } = post
+  const { title, description, url, slug, publishedAt, estimatedTimeToRead } = post
 
   return (
     <div
@@ -24,7 +24,7 @@ const BlogCard: FC<BlogCardProps> = ({ post }) => {
       <figure className="relative h-40 w-full overflow-hidden bg-gray-200">
         <img
           className="absolute inset-0 h-full w-full rounded-md object-cover"
-          src={cover}
+          src={url}
           alt="demo"
         />
       </figure>
@@ -33,9 +33,9 @@ const BlogCard: FC<BlogCardProps> = ({ post }) => {
         <h3 className="mb-2 text-xl font-bold text-primary transition-colors duration-200 hover:text-theme">
           {title}
         </h3>
-        <p className="text-gray-700">{shortDescription}</p>
+        <p className="text-gray-700">{description}</p>
         <p className="mt-4 text-sm font-semibold text-primary">
-          {formatDate(publishDate)} | {estimatedTimeToRead}
+          {formatDate(publishedAt)} | {estimatedTimeToRead}
         </p>
       </a>
     </div>

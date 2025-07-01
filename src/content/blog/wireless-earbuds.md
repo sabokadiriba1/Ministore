@@ -1,9 +1,9 @@
 ---
 title: "Wireless Earbuds"
-shortDescription: "Top-rated earbuds with noise canceling under $50."
-cover: "https://images.unsplash.com/photo-1606813902735-066665f00832?q=80&w=2070&auto=format&fit=crop"
+description: "Top-rated earbuds with noise canceling under $50."
+url: "https://images.unsplash.com/photo-1606813902735-066665f00832?q=80&w=2070&auto=format&fit=crop"
 slug: "wireless-earbuds"
-publishDate: "2024-07-10"
+publishedAt: "2024-07-10"
 estimatedTimeToRead: "3 min read"
 ---
 

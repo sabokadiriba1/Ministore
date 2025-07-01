@@ -13,10 +13,10 @@ export const getAllPosts = (): BlogPost[] => {
 
     return {
       title: data.title,
-      shortDescription: data.shortDescription,
-      cover: data.cover,
+      description: data.description,
+      url: data.url,
       slug: data.slug ?? slug,
-      publishDate: data.publishDate,
+      publishedAt: data.publishedAt,
       estimatedTimeToRead: data.estimatedTimeToRead,
     }
   })

@@ -4,13 +4,13 @@ import HorizontalBlogCard from './HorizontalBlogCard'
 
 export interface BlogPost {
   title: string
-  shortDescription: string
-  cover: string
+  description: string
+  url: string
   slug: string
-  publishDate: string
+  publishedAt: string
   estimatedTimeToRead: string
- 
 }
+
 
 interface BlogListProps {
   posts: BlogPost[]
