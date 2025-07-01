@@ -1,7 +1,7 @@
 import matter from 'gray-matter'
 import type { BlogPost } from '../components/blog/BlogList'
 
-const postFiles = import.meta.glob('../content/blog/*.md', { as: 'raw', eager: true })
+const postFiles = import.meta.glob('../content/blog/*.{md,mdx}', { as: 'raw', eager: true })
 
 export const getAllPosts = (): BlogPost[] => {
   const posts: BlogPost[] = Object.entries(postFiles).map(([filePath, raw]) => {
