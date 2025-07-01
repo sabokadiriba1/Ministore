@@ -22,8 +22,8 @@ function App() {
         <CategoryList categories={categories} />
 
         <SectionHeading
-          title={['Latest', 'Articles']}
-          subtitle="Diverse Range of articles related to html css and javascript"
+          title={['የቅርብ ጊዜ', 'ልጥፎች']}
+          subtitle=""
         />
         <BlogList posts={posts} />
 
